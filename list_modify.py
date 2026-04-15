@@ -12,7 +12,19 @@ def put(value, lst):
         put("Blue", colors) -> 1
         # colors ahora es ["Red", "Blue", "Green"]
     """
-    return "ANSWER HERE"  # Remove this line and implement
+    list= lst
+    if "" in list:
+        indice= list.index("")
+        list[indice] = value
+        return indice
+
+
+    else:
+        return -1
+
+
+
+
 
 
 def remove(value, lst):
@@ -26,4 +38,10 @@ def remove(value, lst):
         remove("Red", colors) -> 2
         # colors ahora es ["", "Green", "", "Blue"]
     """
-    return "ANSWER HERE"  # Remove this line and implement
+    lista=lst
+    for indice in lista:
+        if indice == value:
+            lista[lista.index(value)] = ""
+
+    return lst.count("")
+    
